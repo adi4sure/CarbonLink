@@ -7,16 +7,23 @@
 </h1>
 
 <p align="center">
-  <strong>The Decentralized Platform Turning Real-World Eco-Actions into Verified Carbon Credits</strong>
+  <strong>A Full-Stack MERN Application for Decentralized Carbon Credit Management</strong>
 </p>
 
 <p align="center">
-  <a href="#-features"><img src="https://img.shields.io/badge/Features-12+-10b981?style=flat-square" alt="Features"/></a>
-  <a href="#-tech-stack"><img src="https://img.shields.io/badge/Stack-React%20%2B%20Node.js-61DAFB?style=flat-square&logo=react&logoColor=black" alt="Tech Stack"/></a>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+</p>
+
+<p align="center">
+  <a href="#-features"><img src="https://img.shields.io/badge/Features-18+-10b981?style=flat-square" alt="Features"/></a>
+  <a href="#-mern-stack-architecture"><img src="https://img.shields.io/badge/Stack-MERN-00ED64?style=flat-square&logo=mongodb&logoColor=white" alt="MERN Stack"/></a>
   <a href="#-getting-started"><img src="https://img.shields.io/badge/Setup-5%20min-f59e0b?style=flat-square" alt="Setup Time"/></a>
   <img src="https://img.shields.io/badge/License-MIT-8b5cf6?style=flat-square" alt="License"/>
-  <img src="https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node"/>
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose"/>
+  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
 </p>
 
 <p align="center">
@@ -31,9 +38,9 @@
 
 ## 🎯 What is CarbonLink?
 
-**CarbonLink** is a full-stack web platform that bridges the gap between **environmental action** and **carbon credit economics**. Users can submit real-world eco-actions — tree planting, solar panel installations, composting, sustainable farming — get them **AI-verified**, and receive **CarbonLink Credits (CLC)** that can be traded on a built-in marketplace.
+**CarbonLink** is a production-grade **MERN stack** (MongoDB, Express.js, React, Node.js) web application that bridges the gap between **environmental action** and **carbon credit economics**. Users can submit real-world eco-actions — tree planting, solar panel installations, composting, sustainable farming — get them **AI-verified**, and receive **CarbonLink Credits (CLC)** that can be traded on a built-in marketplace.
 
-> 💡 **Think of it as**: GitHub for environmental impact, but with a marketplace where your contributions have real monetary value.
+> 💡 **Think of it as**: GitHub for environmental impact, built on the MERN stack, with a marketplace where your contributions have real monetary value.
 
 ### ✨ Why CarbonLink?
 
@@ -114,67 +121,88 @@
 | **Responsive Design** | Desktop sidebar ↔ Mobile bottom navigation |
 | **Toast Notifications** | react-hot-toast for all user actions |
 
-### 🔧 Backend
+### 🔧 Backend (Node.js + Express + MongoDB)
 | Feature | Description |
 |---------|-------------|
 | **RESTful API** | Express.js with modular route/controller/service architecture |
+| **MongoDB + Mongoose** | Full Mongoose ODM with schemas, validators, virtuals & aggregation pipelines |
+| **Dual Database Mode** | MongoDB for production, auto-fallback to JSON file DB for zero-config local dev |
 | **JWT Authentication** | Secure token-based auth with 7-day expiry |
 | **Google OAuth2** | Server-side ID token verification via `google-auth-library` |
 | **AI Verification** | Simulated verification pipeline for eco-action submissions |
 | **Credit Minting** | Automated CLC credit issuance on action approval |
 | **Rate Limiting** | Configurable request throttling per IP |
 | **Security Hardening** | Helmet, CORS, XSS sanitization, input validation |
-| **JSON Database** | Zero-dependency file-based DB (no MongoDB/Postgres required) |
 
 ---
 
-## 🏗 Architecture
+## 🏗 MERN Stack Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                          CarbonLink Platform                         │
-├───────────────────────────────┬───────────────────────────────────────┤
-│         FRONTEND (Vite)       │           BACKEND (Express)           │
-│                               │                                       │
-│  ┌─────────┐  ┌───────────┐  │  ┌──────────┐  ┌──────────────────┐  │
-│  │ React 19│  │Framer Mot.│  │  │ Routes   │  │  Controllers     │  │
-│  │   SPA   │──│ Animations│  │  │ /auth    │──│  authController  │  │
-│  └────┬────┘  └───────────┘  │  │ /eco-act │  │  ecoController   │  │
-│       │                      │  │ /credits │  │  creditController │  │
-│  ┌────▼────┐  ┌───────────┐  │  │ /market  │  │  marketController│  │
-│  │ Recharts│  │  Three.js │  │  │ /verify  │  │  verifyController│  │
-│  │ Charts  │  │  WebGL    │  │  └──────────┘  └────────┬─────────┘  │
-│  └─────────┘  └───────────┘  │                         │             │
-│                               │  ┌─────────────────────▼──────────┐  │
-│  ┌──────────────────────┐    │  │         Services Layer          │  │
-│  │   Context Providers  │    │  │  creditService │ verifyService  │  │
-│  │  AuthCtx │ SidebarCtx│    │  │  ipfsService   │                │  │
-│  └──────────────────────┘    │  └─────────────────────┬──────────┘  │
-│                               │                         │             │
-│  Port: 5173                  │  ┌─────────────────────▼──────────┐  │
-│  Proxy: /api → :5000         │  │     JSON File Database         │  │
-│                               │  │  users.json │ credits.json    │  │
-│                               │  │  eco-actions.json              │  │
-│                               │  └────────────────────────────────┘  │
-│                               │  Port: 5000                          │
-└───────────────────────────────┴───────────────────────────────────────┘
+┌──────────────────────────────── MERN STACK ──────────────────────────────┐
+│                          CarbonLink Platform                             │
+├─────────────────────────────┬────────────────────────────────────────────┤
+│    M - MongoDB              │    E - Express.js                          │
+│    R - React 19             │    N - Node.js                             │
+├─────────────────────────────┼────────────────────────────────────────────┤
+│      FRONTEND (React)       │           BACKEND (Express + Node)         │
+│                              │                                            │
+│  ┌──────────┐ ┌──────────┐  │  ┌───────────┐  ┌───────────────────┐     │
+│  │ React 19 │ │ Framer   │  │  │  Routes   │  │   Controllers     │     │
+│  │  SPA +   │─│ Motion   │  │  │  /auth    │──│  authController   │     │
+│  │ React    │ │ Anims    │  │  │  /eco-act │  │  ecoController    │     │
+│  │ Router   │ └──────────┘  │  │  /credits │  │  creditController │     │
+│  └────┬─────┘               │  │  /market  │  │  marketController │     │
+│       │                      │  │  /verify  │  │  verifyController │     │
+│  ┌────▼─────┐ ┌──────────┐  │  └───────────┘  └────────┬──────────┘     │
+│  │ Recharts │ │ Three.js │  │                          │                │
+│  │ 11 Chart │ │  WebGL   │  │  ┌──────────────────────▼───────────┐     │
+│  │  Types   │ │  3D      │  │  │        Services Layer            │     │
+│  └──────────┘ └──────────┘  │  │  creditService │ verifyService   │     │
+│                              │  │  ipfsService                     │     │
+│  ┌────────────────────────┐ │  └──────────────────────┬───────────┘     │
+│  │   Context Providers    │ │                          │                │
+│  │ AuthCtx │ SidebarCtx   │ │  ┌──────────────────────▼───────────┐     │
+│  └────────────────────────┘ │  │    🍃 MongoDB (Mongoose ODM)     │     │
+│                              │  │  ┌─────────┐ ┌──────────────────┐│     │
+│  Axios ──── /api proxy ──── │──│  │ Users   │ │ EcoActions       ││     │
+│                              │  │  │ Credits │ │ Listings         ││     │
+│  Port: 5173                 │  │  └─────────┘ └──────────────────┘│     │
+│                              │  │  Fallback: JSON File DB (dev)   │     │
+│                              │  └─────────────────────────────────┘     │
+│                              │  Port: 5000                              │
+└─────────────────────────────┴────────────────────────────────────────────┘
 ```
 
-### Request Flow
+### MERN Request Flow
 
 ```
-User Action → React Component → Axios API Call → Express Router
-                                                       │
-                                          Auth Middleware (JWT)
-                                                       │
-                                              Controller Logic
-                                                       │
-                                              Service Layer
-                                                       │
-                                           JSON File Database
-                                                       │
-                                              Response ← ← ←
+[React Component] → Axios API Call → [Express Router] → Auth Middleware (JWT)
+                                                              │
+                                                    [Controller Logic]
+                                                              │
+                                                     [Service Layer]
+                                                              │
+                                            ┌─────────────────┴──────────────────┐
+                                            │                                    │
+                                   [🍃 MongoDB/Mongoose]              [JSON File DB]
+                                    (if MONGO_URI set)              (fallback for dev)
+                                            │                                    │
+                                            └─────────────────┬──────────────────┘
+                                                              │
+                                                    [JSON Response]
+                                                              │
+                                                    [React State Update]
 ```
+
+### MERN Stack Breakdown
+
+| Layer | Technology | Role in CarbonLink |
+|-------|-----------|--------------------|
+| **M** — MongoDB | Mongoose 8.x ODM | Document storage with schemas, validators, virtuals, aggregation pipelines, and compound indexes |
+| **E** — Express | Express 4.21 | RESTful API with 14 endpoints, middleware stack (Helmet, CORS, rate-limit, JWT auth) |
+| **R** — React | React 19 SPA | Component-driven UI with Context API, React Router 7, Recharts, Three.js, Framer Motion |
+| **N** — Node.js | Node 18+ runtime | Server runtime with ES modules, `--watch` mode, Google OAuth, bcrypt hashing |
 
 ---
 
@@ -226,7 +254,8 @@ CarbonLink/
 │   ├── uploads/                     # File uploads directory
 │   ├── src/
 │   │   ├── config/
-│   │   │   └── db.js                # JSON database connection
+│   │   │   ├── db.js                # MongoDB/Mongoose + JSON DB fallback
+│   │   │   └── jsonDb.js            # JSON file database engine
 │   │   ├── controllers/
 │   │   │   ├── authController.js    # Register, login, Google OAuth
 │   │   │   ├── creditController.js  # Credit CRUD operations
@@ -238,9 +267,13 @@ CarbonLink/
 │   │   │   ├── errorHandler.js      # Global error handler
 │   │   │   └── upload.js            # Multer file upload config
 │   │   ├── models/
-│   │   │   ├── User.js              # User model (bcrypt hashing)
-│   │   │   ├── Credit.js            # Carbon credit model
-│   │   │   └── EcoAction.js         # Eco-action model
+│   │   │   ├── User.js              # User model (JSON DB adapter)
+│   │   │   ├── Credit.js            # Credit model (JSON DB adapter)
+│   │   │   ├── EcoAction.js         # EcoAction model (JSON DB adapter)
+│   │   │   └── schemas/             # 🍃 Mongoose Schemas
+│   │   │       ├── UserSchema.js    #   User schema + virtuals
+│   │   │       ├── CreditSchema.js  #   Credit schema + aggregation
+│   │   │       └── EcoActionSchema.js # EcoAction schema + indexes
 │   │   ├── routes/
 │   │   │   ├── auth.js              # POST /register, /login, /google
 │   │   │   ├── credits.js           # GET/POST /credits
@@ -268,11 +301,14 @@ CarbonLink/
 
 ### Prerequisites
 
-| Tool | Version | Check |
-|------|---------|-------|
-| **Node.js** | ≥ 18.x | `node --version` |
-| **npm** | ≥ 9.x | `npm --version` |
-| **Git** | Any | `git --version` |
+| Tool | Version | Check | Required |
+|------|---------|-------|----------|
+| **Node.js** | ≥ 18.x | `node --version` | ✅ Yes |
+| **npm** | ≥ 9.x | `npm --version` | ✅ Yes |
+| **Git** | Any | `git --version` | ✅ Yes |
+| **MongoDB** | ≥ 6.x | `mongod --version` | ⚡ Optional (uses JSON DB fallback) |
+
+> 💡 **No MongoDB?** No problem! CarbonLink auto-detects and falls back to a zero-config JSON file database. Perfect for getting started instantly.
 
 ### 1️⃣ Clone the Repository
 
@@ -300,6 +336,11 @@ npm install
 # Server
 PORT=5000
 NODE_ENV=development
+
+# MongoDB (MERN Stack) — leave empty to use JSON file DB
+MONGO_URI=mongodb://localhost:27017/carbonlink
+# Or use MongoDB Atlas:
+# MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.xxxxx.mongodb.net/carbonlink
 
 # JWT
 JWT_SECRET=your_super_secret_jwt_key_here
@@ -456,11 +497,13 @@ npm run dev
 | **React Icons** | 5.4 | Icon library (HeroIcons) |
 | **React Dropzone** | 14.3 | File upload drag-and-drop |
 
-### Backend
+### Backend (Node.js + Express)
 
 | Technology | Version | Purpose |
 |-----------|---------|---------|
 | **Express** | 4.21 | HTTP framework |
+| **MongoDB** | 6.x+ | NoSQL document database |
+| **Mongoose** | 8.x | MongoDB ODM with schemas, validators & aggregation |
 | **JWT** | 9.0 | Token authentication |
 | **bcryptjs** | 3.0 | Password hashing |
 | **google-auth-library** | 10.6 | Google OAuth2 verification |
@@ -570,6 +613,7 @@ npm run seed      # Seed database with demo data
 |----------|----------|---------|-------------|
 | `PORT` | No | `5000` | Server port |
 | `NODE_ENV` | No | `development` | Environment mode |
+| `MONGO_URI` | No | — | MongoDB connection string (falls back to JSON DB if empty) |
 | `JWT_SECRET` | **Yes** | — | JWT signing secret |
 | `JWT_EXPIRES_IN` | No | `7d` | Token expiry duration |
 | `GOOGLE_CLIENT_ID` | No | — | Google OAuth client ID |
@@ -629,6 +673,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 🙏 Acknowledgments
 
+- **MongoDB & Mongoose** — Document database & ODM
 - **React Three Fiber** — 3D rendering ecosystem
 - **Recharts** — Composable chart library
 - **Framer Motion** — Production-ready animation library
@@ -638,7 +683,14 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <p align="center">
-  <strong>Built with 🌱 for a greener planet</strong>
+  <strong>Built with the MERN Stack 🌱 for a greener planet</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Express-000?style=flat-square&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
 </p>
 
 <p align="center">
