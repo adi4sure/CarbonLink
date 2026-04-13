@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "d078f409-8dcc-414f-b4da-3e76b8606bd2",
+    "name": "Aarav Sharma",
+    "email": "aarav@carbonlink.io",
+    "password": "$2b$12$1Nun/ylFv8nMnu98XXYy1uyGJh0N8xapo/x1M3kpqrbOCzp0JgMbK",
+    "role": "eco_actor",
+    "creditBalance": 8600,
+    "totalCo2Offset": 8600,
+    "totalEarnings": 0,
+    "isVerified": true,
+    "createdAt": "2026-04-11T13:46:11.287Z",
+    "updatedAt": "2026-04-11T13:46:12.056Z"
+  },
+  {
+    "_id": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "name": "Priya Patel",
+    "email": "priya@carbonlink.io",
+    "password": "$2b$12$QIspaak2sLdzsgppTYMV/eBkv0.qV5UdgzSvEXFD/iJUakazg9SqS",
+    "role": "eco_actor",
+    "creditBalance": 7590,
+    "totalCo2Offset": 7590,
+    "totalEarnings": 0,
+    "isVerified": true,
+    "createdAt": "2026-04-11T13:46:11.540Z",
+    "updatedAt": "2026-04-11T13:46:12.059Z"
+  },
+  {
+    "_id": "19d2a241-b203-49aa-a439-eb96ae13142a",
+    "name": "Demo User",
+    "email": "demo@carbonlink.io",
+    "password": "$2b$12$hs8e4JRjk.CJoTBqqK.RfO4D/iGwZJn.Ly4ygvXjQHcvzS86V9Jf6",
+    "role": "eco_actor",
+    "creditBalance": 550,
+    "totalCo2Offset": 550,
+    "totalEarnings": 0,
+    "isVerified": true,
+    "createdAt": "2026-04-11T13:46:11.795Z",
+    "updatedAt": "2026-04-11T13:46:12.060Z"
+  },
+  {
+    "_id": "6261566a-b112-43c3-975f-57d5c0bd36ab",
+    "name": "GreenCorp Buyer",
+    "email": "buyer@carbonlink.io",
+    "password": "$2b$12$oILTZwGnvxUWdZgAvhRm7eqz1kmqbiiZQRLwNWBc9eizt9Y71Z6Te",
+    "role": "buyer",
+    "creditBalance": 0,
+    "totalCo2Offset": 0,
+    "totalEarnings": 0,
+    "isVerified": true,
+    "createdAt": "2026-04-11T13:46:12.049Z",
+    "updatedAt": "2026-04-11T13:46:12.049Z"
+  }
+]

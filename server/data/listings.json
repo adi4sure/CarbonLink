@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "ed5818de-9985-4fc2-9a92-1292cf50ddf3",
+    "seller": "d078f409-8dcc-414f-b4da-3e76b8606bd2",
+    "amount": 500,
+    "pricePerKg": 12.5,
+    "totalPrice": 6250,
+    "description": "500 kg CO₂ credits from verified tree planting in Western Ghats.",
+    "actionType": "tree_planting",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.061Z",
+    "updatedAt": "2026-04-11T13:46:12.061Z"
+  },
+  {
+    "_id": "d4b03661-4e41-45b0-9466-56991feff2c8",
+    "seller": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "amount": 100,
+    "pricePerKg": 8,
+    "totalPrice": 800,
+    "description": "100 kg CO₂ credits from community composting in Pune.",
+    "actionType": "composting",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.061Z",
+    "updatedAt": "2026-04-11T13:46:12.061Z"
+  },
+  {
+    "_id": "51203126-5bfd-4afd-848e-48beebda8399",
+    "seller": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "amount": 2000,
+    "pricePerKg": 15,
+    "totalPrice": 30000,
+    "description": "2,000 kg CO₂ credits from sustainable farming transition.",
+    "actionType": "sustainable_farming",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.062Z",
+    "updatedAt": "2026-04-11T13:46:12.062Z"
+  }
+]

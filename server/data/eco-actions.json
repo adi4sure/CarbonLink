@@ -1,0 +1,174 @@
+[
+  {
+    "_id": "7b063b91-98b4-49ef-8ed6-fa6fd521b267",
+    "user": "d078f409-8dcc-414f-b4da-3e76b8606bd2",
+    "type": "tree_planting",
+    "quantity": 50,
+    "description": "Planted 50 native trees in the Western Ghats reforestation project.",
+    "proof": {
+      "photos": [
+        "/uploads/tree_planting_1.jpg"
+      ],
+      "gps": {
+        "lat": 13.0827,
+        "lng": 80.2707
+      },
+      "timestamp": "2026-04-09T13:46:12.049Z",
+      "ipfsHash": "bafybeigc122fe11b568a0edd0c7777b95038279c08d4900cd82f5f357"
+    },
+    "verification": {
+      "status": "approved",
+      "score": 0.92,
+      "notes": "Verification passed with confidence 92%.",
+      "verifiedAt": "2026-04-10T13:46:12.050Z",
+      "verifiedBy": "CarbonLink AI Verification Engine v1.0"
+    },
+    "co2Estimate": 1100,
+    "creditsIssued": true,
+    "createdAt": "2026-04-11T13:46:12.050Z",
+    "updatedAt": "2026-04-11T13:46:12.050Z"
+  },
+  {
+    "_id": "33af7a56-3ccc-47a2-a992-5f8b1de6b2e2",
+    "user": "d078f409-8dcc-414f-b4da-3e76b8606bd2",
+    "type": "solar_panel",
+    "quantity": 5,
+    "description": "Installed 5kW rooftop solar panel system for community center.",
+    "proof": {
+      "photos": [
+        "/uploads/solar_1.jpg"
+      ],
+      "gps": {
+        "lat": 11.0168,
+        "lng": 76.9558
+      },
+      "timestamp": "2026-04-06T13:46:12.050Z",
+      "ipfsHash": "bafybeig97f9077d4fac13af4e92cf121e2504c047a69851f10bf53205"
+    },
+    "verification": {
+      "status": "approved",
+      "score": 0.88,
+      "notes": "Solar panel installation verified. 5kW capacity confirmed.",
+      "verifiedAt": "2026-04-07T13:46:12.050Z",
+      "verifiedBy": "CarbonLink AI Verification Engine v1.0"
+    },
+    "co2Estimate": 7500,
+    "creditsIssued": true,
+    "createdAt": "2026-04-11T13:46:12.051Z",
+    "updatedAt": "2026-04-11T13:46:12.051Z"
+  },
+  {
+    "_id": "7d24c8b5-df5a-400a-b035-dd282f224c88",
+    "user": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "type": "composting",
+    "quantity": 500,
+    "description": "Community composting facility processing 500kg organic waste weekly.",
+    "proof": {
+      "photos": [
+        "/uploads/compost_1.jpg"
+      ],
+      "gps": {
+        "lat": 18.5204,
+        "lng": 73.8567
+      },
+      "timestamp": "2026-04-08T13:46:12.050Z",
+      "ipfsHash": "bafybeigd72c958c2a7e45281f5ecfabe472b65ebc072bdacf1685366d"
+    },
+    "verification": {
+      "status": "approved",
+      "score": 0.85,
+      "notes": "Composting operation verified.",
+      "verifiedAt": "2026-04-09T13:46:12.050Z",
+      "verifiedBy": "CarbonLink AI Verification Engine v1.0"
+    },
+    "co2Estimate": 250,
+    "creditsIssued": true,
+    "createdAt": "2026-04-11T13:46:12.051Z",
+    "updatedAt": "2026-04-11T13:46:12.051Z"
+  },
+  {
+    "_id": "2661d93d-48ae-427b-b4e3-792fc1e2cfde",
+    "user": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "type": "sustainable_farming",
+    "quantity": 2,
+    "description": "Converted 2 hectares to organic sustainable farming.",
+    "proof": {
+      "photos": [
+        "/uploads/farm_1.jpg"
+      ],
+      "gps": {
+        "lat": 19.7515,
+        "lng": 75.7139
+      },
+      "timestamp": "2026-04-04T13:46:12.050Z",
+      "ipfsHash": "bafybeigf237f7849decd5d1a1a05a6a33c293b5d51ce65405e232a6e1"
+    },
+    "verification": {
+      "status": "approved",
+      "score": 0.91,
+      "notes": "Sustainable farming transition verified.",
+      "verifiedAt": "2026-04-05T13:46:12.050Z",
+      "verifiedBy": "CarbonLink AI Verification Engine v1.0"
+    },
+    "co2Estimate": 7340,
+    "creditsIssued": true,
+    "createdAt": "2026-04-11T13:46:12.052Z",
+    "updatedAt": "2026-04-11T13:46:12.052Z"
+  },
+  {
+    "_id": "74c0d19e-8a9b-4293-a7fb-ee6119bf876c",
+    "user": "19d2a241-b203-49aa-a439-eb96ae13142a",
+    "type": "tree_planting",
+    "quantity": 25,
+    "description": "Planted 25 fruit trees in urban community garden.",
+    "proof": {
+      "photos": [
+        "/uploads/demo_trees.jpg"
+      ],
+      "gps": {
+        "lat": 28.6139,
+        "lng": 77.209
+      },
+      "timestamp": "2026-04-10T13:46:12.050Z",
+      "ipfsHash": "bafybeigd4c5306642eb043e533c7c8b040bcb25fe37504e66f5e652ce"
+    },
+    "verification": {
+      "status": "approved",
+      "score": 0.87,
+      "notes": "Verification passed. 25 trees confirmed.",
+      "verifiedAt": "2026-04-11T13:46:12.050Z",
+      "verifiedBy": "CarbonLink AI Verification Engine v1.0"
+    },
+    "co2Estimate": 550,
+    "creditsIssued": true,
+    "createdAt": "2026-04-11T13:46:12.052Z",
+    "updatedAt": "2026-04-11T13:46:12.052Z"
+  },
+  {
+    "_id": "68ad6613-7516-4967-88c4-2616c8dbd16e",
+    "user": "19d2a241-b203-49aa-a439-eb96ae13142a",
+    "type": "reforestation",
+    "quantity": 1,
+    "description": "Participated in 1 hectare reforestation drive.",
+    "proof": {
+      "photos": [
+        "/uploads/demo_forest.jpg"
+      ],
+      "gps": {
+        "lat": 27.5946,
+        "lng": 75.6913
+      },
+      "timestamp": "2026-04-11T13:46:12.050Z",
+      "ipfsHash": "bafybeigaa654df83d7d8515cae5772318d39f2ff91cd1d2e7a1b6f57c"
+    },
+    "verification": {
+      "status": "pending",
+      "score": null,
+      "notes": null
+    },
+    "co2Estimate": 11000,
+    "creditsIssued": false,
+    "createdAt": "2026-04-11T13:46:12.053Z",
+    "updatedAt": "2026-04-11T13:46:12.053Z"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "9218f9f4-ab82-49fd-b4c0-84ffc1df2a3b",
+    "owner": "d078f409-8dcc-414f-b4da-3e76b8606bd2",
+    "amount": 1100,
+    "sourceAction": "7b063b91-98b4-49ef-8ed6-fa6fd521b267",
+    "txHash": "0xab67e05c19786f4672c119db497562b93878a1e37b67e94204afeb8e296574e2",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.053Z",
+    "updatedAt": "2026-04-11T13:46:12.053Z"
+  },
+  {
+    "_id": "9b5e7d41-47bc-4cce-b5fa-799d567cb085",
+    "owner": "d078f409-8dcc-414f-b4da-3e76b8606bd2",
+    "amount": 7500,
+    "sourceAction": "33af7a56-3ccc-47a2-a992-5f8b1de6b2e2",
+    "txHash": "0xff6af897aa0e96efdb701697625bd01b228699c6a3aedc4e24139b14c587d542",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.055Z",
+    "updatedAt": "2026-04-11T13:46:12.055Z"
+  },
+  {
+    "_id": "bcefc8cf-0547-46d1-b0db-bf9f43f531da",
+    "owner": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "amount": 250,
+    "sourceAction": "7d24c8b5-df5a-400a-b035-dd282f224c88",
+    "txHash": "0x11380aefde44273abb9f115b20140807863c7e88a4da6722a3ec2f30e7605bbc",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.057Z",
+    "updatedAt": "2026-04-11T13:46:12.057Z"
+  },
+  {
+    "_id": "3911d98d-8e84-4039-9df4-e6c86bc84e3e",
+    "owner": "18c9163d-c922-41c8-ac0a-f5c410ef2d5c",
+    "amount": 7340,
+    "sourceAction": "2661d93d-48ae-427b-b4e3-792fc1e2cfde",
+    "txHash": "0x6055b5a1fed72cb4b640ab708ab06b2eeb4d791b5fa91cf5875c18678c1e0444",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.058Z",
+    "updatedAt": "2026-04-11T13:46:12.058Z"
+  },
+  {
+    "_id": "f5401455-1595-4d72-874f-3fb14340005e",
+    "owner": "19d2a241-b203-49aa-a439-eb96ae13142a",
+    "amount": 550,
+    "sourceAction": "74c0d19e-8a9b-4293-a7fb-ee6119bf876c",
+    "txHash": "0xfa3512f506968d2d54170d0285e007d574c8fc79c89ede7d7f5660185910e24b",
+    "status": "active",
+    "createdAt": "2026-04-11T13:46:12.059Z",
+    "updatedAt": "2026-04-11T13:46:12.059Z"
+  }
+]
